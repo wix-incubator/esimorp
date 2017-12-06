@@ -1,0 +1,23 @@
+{
+  "name": "esimorp",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "npm run webpack -- --progress --watch",
+    "build": "tsc --rootDir src --lib ES2017 --outDir dist src/*.ts",
+    "test": "mocha",
+    "coverage": "nyc -n=src/*/main/** -r html -e .ts npm test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.54",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "mocha-typescript": "^1.1.12",
+    "ts-loader": "^3.2.0",
+    "ts-node": "^3.3.0",
+    "tsconfig-paths": "^2.4.0",
+    "typescript": "^2.6.2"
+  }
+}
